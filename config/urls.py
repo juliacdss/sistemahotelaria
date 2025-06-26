@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Endereco, Hospede, Quarto, Reserva, Servico, ReservaServico, Pagamento, Funcionario
-from .serializers import EnderecoSerializer, HospedeSerializer, QuartoSerializer, ReservaSerializer, ServicoSerializer, ReservaServicoSerializer, PagamentoSerializer, FuncionarioSerializer
+from hotel.models import Endereco, Hospede, Quarto, Reserva, Servico, ReservaServico, Pagamento, Funcionario
+from hotel.serializers import EnderecoSerializer, HospedeSerializer, QuartoSerializer, ReservaSerializer, ServicoSerializer, ReservaServicoSerializer, PagamentoSerializer, FuncionarioSerializer
 
 class EnderecoViewSet(ModelViewSet):
     queryset = Endereco.objects.all()
