@@ -39,4 +39,4 @@ class PagamentoSerializer(ModelSerializer):
 class FuncionarioSerializer(ModelSerializer):
     class Meta:
         model = Funcionario
-        fields = '__all__'   git push -u origin feature/serializer
+        fields = '__all__' 
