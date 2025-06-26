@@ -1,22 +1,36 @@
-"""
-URL configuration for config project.
+from rest_framework.viewsets import ModelViewSet
+from .models import Endereco, Hospede, Quarto, Reserva, Servico, ReservaServico, Pagamento, Funcionario
+from .serializers import EnderecoSerializer, HospedeSerializer, QuartoSerializer, ReservaSerializer, ServicoSerializer, ReservaServicoSerializer, PagamentoSerializer, FuncionarioSerializer
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
+class EnderecoViewSet(ModelViewSet):
+    queryset = Endereco.objects.all()
+    serializer_class = EnderecoSerializer
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+class HospedeViewSet(ModelViewSet):
+    queryset = Hospede.objects.all()
+    serializer_class = HospedeSerializer    
+
+class QuartoViewSet(ModelViewSet):
+    queryset = Quarto.objects.all()
+    serializer_class = QuartoSerializer    
+
+class ReservaViewSet(ModelViewSet):
+    queryset = Reserva.objects.all()
+    serializer_class = ReservaSerializer    
+
+class ServicoViewSet(ModelViewSet):
+    queryset = Servico.objects.all()
+    serializer_class = ServicoSerializer
+
+
+class ReservaServicoViewSet(ModelViewSet):
+    queryset = ReservaServico.objects.all()
+    serializer_class = ReservaServicoSerializer
+
+class PagamentoViewSet(ModelViewSet):
+    queryset = Pagamento.objects.all()
+    serializer_class = PagamentoSerializer    
+
+class FuncionarioViewSet(ModelViewSet):
+    queryset = Funcionario.objects.all()
+    serializer_class = FuncionarioSerializer    
